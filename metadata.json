@@ -1,0 +1,6 @@
+{
+  "name": "Minimalist LLM Chat Client",
+  "description": "A sleek, Claude-style dark theme chat interface designed for local LM Studio integration and secure server-side Gemini AI models, featuring rich text formatting, JetBrains Mono syntax-highlighted code blocks, and dynamic chat history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

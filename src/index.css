@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Newsreader", "Georgia", "Lora", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom classes to support Claude-like minimalist UI, smooth scrolling and ambient scrollbars */
+html, body, #root {
+  scroll-behavior: smooth;
+  background-color: #0a0a0a; /* Pure clean dark theme base */
+  color: #ededed; /* Bright modern soft gray as requested in minimalist instructions */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Code Syntax highlighting custom styles */
+.syntax-keyword { color: #f43f5e; font-weight: 500; } /* rose-500 */
+.syntax-string { color: #34d399; } /* emerald-400 */
+.syntax-number { color: #fb923c; } /* orange-400 */
+.syntax-comment { color: #71717a; font-style: italic; } /* zinc-500 */
+.syntax-type { color: #60a5fa; } /* blue-400 */
+.syntax-builtin { color: #cfbcff; } /* purple-ish */
+.syntax-function { color: #a78bfa; } /* violet-400 */
+.syntax-operator { color: #f472b6; } /* pink-400 */
+.syntax-boolean { color: #fb7185; } /* rose-400 */
+
+/* Animations helper */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-msg-fade {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Markdown styling classes for Claude-like editorial clarity */
+.prose-claude {
+  font-family: var(--font-serif);
+  font-size: 1.08rem; /* perfect literary size */
+  line-height: 1.68;
+  color: #e4e4e7;
+}
+
+.prose-claude p {
+  margin-bottom: 0.9rem;
+}
+
+.prose-claude p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-claude ul, .prose-claude ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-claude ul {
+  list-style-type: disc;
+}
+
+.prose-claude ol {
+  list-style-type: decimal;
+}
+
+.prose-claude li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-claude strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.prose-claude h1, .prose-claude h2, .prose-claude h3, .prose-claude h4 {
+  font-family: var(--font-sans);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-claude h1 { font-size: 1.4rem; }
+.prose-claude h2 { font-size: 1.25rem; }
+.prose-claude h3 { font-size: 1.15rem; }
+.prose-claude h4 { font-size: 1.05rem; }
