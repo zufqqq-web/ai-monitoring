@@ -57,7 +57,6 @@ Instead of just chatting with a model, you can:
 
 ## ⚙️ Installation
 
-`bash
 # clone repo
 git clone https://github.com/yourname/ai-local-dashboard
 
