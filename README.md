@@ -1,20 +1,73 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🧠 AI Local Dashboard
 
-# Run and deploy your AI Studio app
+A local AI-powered dashboard for chatting with LLMs and monitoring system performance in real time.
 
-This contains everything you need to run your app locally.
+Built for local models like LM Studio, with a focus on usability, performance tracking, and developer experience.
 
-View your app in AI Studio: https://ai.studio/apps/0e54d500-2b4e-463b-98ed-a6c0d7a0f3ae
+---
 
-## Run Locally
+## 🚀 Features (v1.0)
 
-**Prerequisites:**  Node.js
+- 💬 Chat interface for local LLMs (LM Studio supported)
+- 🔢 Token counter (prompt + response)
+- 🧠 System resource monitoring (CPU / RAM / GPU usage)
+- ⚡ Response speed tracking (tokens/sec)
+- 🗂 Chat history (saved locally via SQLite)
+- 🎛 Model selection support
+- 🔥 Presets for temperature, top_p, max_tokens
+- 🌙 Dark theme UI
+- 💾 Local persistence using SQLite database
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🧱 Tech Stack
+
+### Frontend
+- React
+- Tailwind CSS
+
+### Backend
+- Python
+- SQLite
+
+### AI Integration
+- LM Studio API (local LLM server)
+
+---
+
+## 🖥️ What this project does
+
+This project turns your local AI model into a usable developer dashboard.
+
+Instead of just chatting with a model, you can:
+
+- Track how your system performs under load
+- Compare different models
+- Monitor token usage
+- Save and revisit conversations
+- Tune generation parameters in real time
+
+---
+
+## 📸 Preview
+
+> (add screenshots or GIFs here later)
+
+---
+
+## ⚙️ Installation
+
+`bash
+# clone repo
+git clone https://github.com/yourname/ai-local-dashboard
+
+cd ai-local-dashboard
+
+# frontend
+npm install
+npm run dev
+
+# backend
+cd backend
+pip install -r requirements.txt
+python main.py
