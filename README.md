@@ -51,7 +51,7 @@ Instead of just chatting with a model, you can:
 
 ## 📸 Preview
 
-> (add screenshots or GIFs here later)
+![Preview](images/preview.png)
 
 ---
 
